@@ -12,7 +12,7 @@ function writeResrume(prefix,code,fn) {
             window.clearInterval(id);
             fn && fn.call()
         }
-	}, 0)
+	}, 50)
 }
     
 var result = `
@@ -44,7 +44,7 @@ body {
 .token.function{ color: #905;}
 
 
-/* 下面介绍下我自己 */
+/* 下面介绍下我自己  做些准备工作 */
 #codeing{ 
     padding-left:16px;
     font-size:14px;
@@ -101,7 +101,7 @@ var mk=`
 熟悉 JavaScript CSS
 
 ## 项目介绍
-* 个人简历（当然不是这个 *.*）
+* 个人简历（当然不是这个 ~.~）
 * 画板
 * 无缝轮播轮播
 * 仿网易云音乐APP页面
@@ -145,7 +145,7 @@ let domPaper=document.querySelector('#paper>.content')
     domPaper.scrollTop=domPaper.scrollHeight
     if (n > markdown.length) {
         window.clearInterval(id);
-        fn && fn.call()
+        fn.call()
     }
 }, 50);
 }
