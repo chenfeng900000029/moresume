@@ -12,7 +12,7 @@ function writeResrume(prefix,code,fn) {
             window.clearInterval(id);
             fn && fn.call()
         }
-	}, 50)
+	}, 30)
 }
     
 var result = `
