@@ -2,11 +2,19 @@
     padding: 0;
     box-sizing: border-box;
 }
-.token.selector{color:#333;}
-.token.property{color:#333;}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+ }
+.token.selector{color:#AECEA4;}
+.token.property{color:#AECEA4;}
 .token.function{ color: #905;}
-#codeing{ height: 100vh;
+#codeing{ height:calc(100vh - 60px);
     font-size:14px;
     overflow: hidden;
+    float: left;
+    color:#AECEA4;
     }
    

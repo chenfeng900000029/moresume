@@ -1,0 +1,116 @@
+
+.toplinebar{
+    background:#333;
+    width: 100%;
+    height: 27px;
+    float: left;
+}
+
+.topcontrollerwrap{ width: 70px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: 10px;
+    width: 80px;
+    float: left;
+}
+.topcontrollerwrapbtn{ 
+    width: 14px;
+    height:14px;
+    display:inline-block;
+    border-radius: 15px;
+    margin-left: 5px;
+    background:#FA5F57;
+    box-shadow: inset 10px 5px 29px -16px rgba(0,0,0,0.75);
+    border:1px solid #D33731;
+    cursor: pointer;
+}
+.topcontrollerwrap > span:nth-child(2){
+    background:#FDBF30;
+    border: solid 1px #FDBF30;
+    cursor: pointer;
+} 
+.topcontrollerwrap > span:nth-child(3){
+    background:#37C940;
+    border: solid 1px #288829;
+    cursor: pointer;
+} 
+.toptitle{ text-align:center;
+    color: #969696;
+    font-size: 12px;
+    line-height: 28px;
+   
+    }
+.sidebar{ width: 60px;
+    height:calc(100vh - 25px) ;
+    left: 0;
+    background: #333;
+    float: left;
+    display: flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    
+}
+.spd{ margin: 0 auto;}
+
+.spd img{width: 24px;
+    height: 24px; 
+    margin-top: 20px; 
+    cursor: pointer; 
+
+}
+.set{  
+    flex: 1;
+    display: flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    margin: 0 auto;
+    margin-bottom: 15px;}
+.set img{width: 24px;
+    height: 24px; 
+    margin-top: 20px; 
+    cursor: pointer;
+    
+
+
+}
+
+.main{ height:calc(100vh - 25px);
+    float: left;
+    width: 100%;
+    background: #1E1E1E;
+}
+.maincontent{ width:calc(100% - 60px);
+    height:calc(100vh - 59px);
+    float: left;
+}
+.maincontenttopbar{ height:35px;
+    width:100%;
+    float: left;
+    background: #000;
+}
+
+.csstabwrap{     width: calc(50% - 60px);
+    height: 35px;
+    float:left;  
+    color: #77D5FF;
+    background: #252526;
+    font-size: 12px;
+    line-height: 35px;  
+    box-shadow: -5px 18px 33px -15px rgba(0,0,0,0.9);
+}
+.csstab1{ width: 90px;
+    height: 35px;
+    float: left;
+    text-align: center;
+    background: #1E1E1E;
+}
+.csstabwrap2{   width:calc(50% + 60px);
+    height: 35px;
+    float:left;  
+    color: #77D5FF;
+    background: #252526;
+    font-size: 12px;
+    line-height: 35px;  
+    box-shadow: -5px 18px 10px -12px rgba(0,0,0,0.1);
+}
+
