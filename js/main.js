@@ -12,20 +12,18 @@ function writeResrume(prefix,code,fn) {
             window.clearInterval(id);
             fn && fn.call()
         }
-	}, 50)
+	}, 0)
 }
     
 var result = `
 
-/*
-* 我用一个动画的形式介绍自己
-* 文字太单调了
-* 我用代码来介绍自己吧
+/*你好面试官 
+* 这是一个仿照vscode界面做的一个简历
+* 内容以动画的形式展示
 * 首先准备点css
 */
 
-
-
+/* 页面功能还在完善中*/
 
 * {
     transition: all 1s;
@@ -45,8 +43,6 @@ body {
 }
 .token.function{ color: #905;}
 
-/* 旋转下 */
-
 
 /* 下面介绍下我自己 */
 #codeing{ 
@@ -60,24 +56,13 @@ body {
     box-shadow:  4px 6px 5px 0px rgba(0,0,0,0.4); 
 }    
  `
-
-// writeResrume(' ',result,()=>{
-//     createPaper(()=>{
-//       writeResrume(result,result2,()=>{
-//           writeMarkDown(mk,()=>{
-//                linkWrapCss(()=>{
-//                   topLine()
-//               })
-//           })
-//       })  
-//     })
-// })
   topLine(()=>{
        linkWrapCss (()=>{
            createPaper(()=>{
                writeResrume(' ',result,()=>{
                   writeResrume(result,result2,()=>{
                      writeMarkDown(mk,()=>{  
+                         markDown()
               })
           })
       })  
@@ -86,11 +71,6 @@ body {
 
 })
 
-
-
-
-
-		
 
 var result2 = `
 #paper{
@@ -101,19 +81,44 @@ var result2 = `
 }
 #paper .content{
     height:100%;
-    width:100%;
-
+    width:calc(100% + 60px);
+    padding-left:30px;
+    color:#ADADAD;
+    overflow:auto;
+    
 }
+
+/* 引入markdown */
+
+
 `
 var mk=`
-##自我介绍
+## 自我介绍
+我叫陈楓 1990 年 9 月出生
+自学前端半年 希望应聘前端开发岗位
 
-##技能介绍
+## 技能介绍
+熟悉 JavaScript CSS
 
-##项目介绍
+## 项目介绍
+* 个人简历（当然不是这个 *.*）
+* 画板
+* 无缝轮播轮播
+* 仿网易云音乐APP页面
+* apple 网站首页
 
-##练习方式
+## 联系方式
+* QQ 408854777
+* Email 408854777 @ qq.com
+* 手机 18357105521
+
+2018-06-08 03:15:24
+
+准备让每块都是可见的形式出现
+看看代码我就 再说吧
+
 `
+
 function createPaper(fn){
 
     
@@ -122,6 +127,7 @@ function createPaper(fn){
 
     var content= document.createElement('pre')
         content.className='content'  
+        content.id='content'
     paper.appendChild(content)
     maincontent.appendChild(paper)
     //alert('11')
@@ -134,6 +140,8 @@ let domPaper=document.querySelector('#paper>.content')
     let id = setInterval(() => {
     n += 1;
     domPaper.innerHTML = markdown.substring(0, n)
+    var domPaperText=domPaper.innerHTML
+        markDown(domPaperText)
     domPaper.scrollTop=domPaper.scrollHeight
     if (n > markdown.length) {
         window.clearInterval(id);
