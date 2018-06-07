@@ -83,6 +83,7 @@ var result2 = `
     height:100%;
     width:calc(100% + 60px);
     padding-left:30px;
+    padding-top:20px;
     color:#ADADAD;
     overflow:auto;
     
