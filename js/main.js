@@ -12,7 +12,7 @@ function writeResrume(prefix,code,fn) {
             window.clearInterval(id);
             fn && fn.call()
         }
-	}, 30)
+	}, 50)
 }
     
 var result = `
@@ -44,7 +44,7 @@ body {
 .token.function{ color: #905;}
 
 
-/* 下面介绍下我自己  做些准备工作 */
+/* 下面介绍下我自己 */
 #codeing{ 
     padding-left:16px;
     font-size:14px;
@@ -62,7 +62,6 @@ body {
                writeResrume(' ',result,()=>{
                   writeResrume(result,result2,()=>{
                      writeMarkDown(mk,()=>{  
-                         markDown()
               })
           })
       })  
@@ -83,7 +82,6 @@ var result2 = `
     height:100%;
     width:calc(100% + 60px);
     padding-left:30px;
-    padding-top:20px;
     color:#ADADAD;
     overflow:auto;
     
@@ -102,7 +100,7 @@ var mk=`
 熟悉 JavaScript CSS
 
 ## 项目介绍
-* 个人简历（当然不是这个 ~.~）
+* 个人简历（当然不是这个 *.*）
 * 画板
 * 无缝轮播轮播
 * 仿网易云音乐APP页面
